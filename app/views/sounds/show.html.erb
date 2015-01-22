@@ -1,0 +1,20 @@
+<h3><%= @sound.title %></h3>
+<%= link_to "Edit this sound", edit_sound_path(@sound) %>
+
+<br><br>
+
+<%= render "sounds/soundcloud_widget" %>
+
+<br><br>
+
+<%= form_for @comment, {url: sound_comments_path(@sound)} do |f| %>
+  <%= f.label "Comment", :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+
+<br><br>
+
+<% @comments.each do |c| %>
+  content: <%= c.content %><br>
+<% end %>

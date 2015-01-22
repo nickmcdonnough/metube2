@@ -1,0 +1,9 @@
+<h3>Create a Sound</h3>
+
+<%= form_for(@sound) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+  <%= f.label :soundcloud_url %>
+  <%= f.text_field :soundcloud_url %><br>
+  <%= f.submit %>
+<% end %>

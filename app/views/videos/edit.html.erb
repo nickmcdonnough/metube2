@@ -1,0 +1,12 @@
+<%= form_for(@video) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+  <%= f.label :description %>
+  <%= f.text_field :description %><br>
+  <%= f.label :youtube_id %>
+  <%= f.text_field :youtube_id, id: "video-ytid" %><br>
+  <%= f.submit "Update Video", id: "video-submit" %>
+<% end %>
+
+<script>
+</script>

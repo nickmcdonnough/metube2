@@ -1,0 +1,4 @@
+<h3>Videos</h3>
+<% @videos.each do |v| %>
+  <%= link_to v.title, video_path(v) %><br>
+<% end %>

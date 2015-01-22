@@ -1,0 +1,8 @@
+<h3>Sounds</h3>
+<% if @sounds.empty? %>
+  No sounds in database!
+<% else %>
+  <% @sounds.each do |s| %>
+    <%= link_to s.title, sound_path(s) %><br>
+  <% end %>
+<% end %>
